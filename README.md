@@ -1,4 +1,4 @@
-## HIFITI 音乐磁场 定时自动签到
+## HIFIBA 音乐磁场 定时自动签到
 
 利用 Github Actions 定时任务实现自动签到，支持多账号同时签到。
 
@@ -8,16 +8,16 @@
 
 - **ACCOUNTS**：账户信息，**多个**账户配置示例如下。推荐使用 [JSON 格式化工具](https://jsoneditoronline.org/) 进行编辑以避免格式出错。
 
-  登陆 HIFITI 后，打开浏览器控制台，输入 `document.cookie`，回车，在字符串上右键，“复制字符串内容”即可得到 Cookie。
+ 登陆 hifiba.com 后，打开浏览器控制台，在网络监控界面获取 Cookie，确保 Cookie 包含 bbs_token 与 bbs_sid 两个字段。
 
   **不要使用网站右上角的“退出”按钮退出登录！这会使 Cookie 失效，如果需要多个账户签到，可以使用无痕模式登录新账号或使用多个浏览器。**
 
   ```json
   [
     {
-      "name": "这里填写账户备注",
-      "cookie": "这里填写 Cookie"
-    },
+      "name": "张三",
+      "cookie": "_wish_accesscount_visited=1; bbs_token=5812sxjsdlPVvkFacSoMuuNl2C8gwNhLkwd5yWT8mVH4biOfW"
+    },#一个账号就删除逗号
     {
       "name": "第 N 个账号",
       "cookie": "这里填写 Cookie"
